@@ -1,0 +1,19 @@
+OLED_ENABLE = yes
+OLED_DRIVER = SSD1306
+ENCODER_ENABLE = yes
+EXTRAKEY_ENABLE = yes
+AUDIO_ENABLE = no
+MUSIC_ENABLE = no
+
+
+
+
+
+HAPTIC_ENABLE = no
+
+
+
+
+
+#PER KEY RGB
+RGB_MATRIX_ENABLE = no     # Enable keyboard RGB matrix (do not use together with RGBLIGHT_ENABLE)
