@@ -1,7 +1,6 @@
 ![KLOR logo](/docs/images/klorfontlogo.svg)
 
-
-This is the QMK config for the KLOR split keyboard.
+## This is the QMK config for the KLOR split keyboard.
 
 [Here](https://github.com/GEIGEIGEIST/zmk-config-klor) you can find the ZMK config for the KLOR.
 
