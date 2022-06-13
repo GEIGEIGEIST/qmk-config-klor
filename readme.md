@@ -9,8 +9,7 @@
 [Here](https://github.com/GEIGEIGEIST/zmk-config-klor) you can find the ZMK config for the KLOR. You need to create your own fork to use it.\
 [Here](https://github.com/GEIGEIGEIST/klor) you can find the hardware files and build guide.
 
-
-
+KLOR is 42 keys column-staggered split keyboard.
 
 
 ## AVR MCU
