@@ -2,8 +2,7 @@
 
 ## This is the QMK config for the KLOR split keyboard.
 
-[Here](https://github.com/GEIGEIGEIST/zmk-config-klor) you can find the ZMK config for the KLOR.
-
+[Here](https://github.com/GEIGEIGEIST/zmk-config-klor) you can find the ZMK config for the KLOR.\
 And [here](https://github.com/GEIGEIGEIST/klor) you can find the hardware files and build guide.
 
 
