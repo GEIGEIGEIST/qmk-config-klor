@@ -24,7 +24,7 @@ Use this command to compile the firmware for the KLOR.
 ## RP204 MCU
 **Adafruit KB2040 / Sparkfun Pro Micro RP2040 / Boardsource Blok**
 
-Currently you need to use [this PR](https://github.com/KarlK90/qmk_firmware/tree/feature/raspberry-pi-rp2040-support) instead of the official QMK Repo, if you plan to use the RP2040.\ 
+Currently you need to use [this PR](https://github.com/KarlK90/qmk_firmware/tree/feature/raspberry-pi-rp2040-support) instead of the official QMK Repo, if you plan to use the RP2040.\
 Place the klor folder from this repository in the keyboards folder of your qmk installation. 
 Use this command to compile the RP2040 firmware for the KLOR.
 
