@@ -6,8 +6,11 @@
 
 # THIS IS THE QMK CONFIG FOR THE KLOR SPLIT KEYBOARD
 
-[Here](https://github.com/GEIGEIGEIST/zmk-config-klor) you can find the ZMK config for the KLOR.\
+[Here](https://github.com/GEIGEIGEIST/zmk-config-klor) you can find the ZMK config for the KLOR. You need to create your own fork to use it.\
 [Here](https://github.com/GEIGEIGEIST/klor) you can find the hardware files and build guide.
+
+
+
 
 
 ## AVR MCU
@@ -21,7 +24,8 @@ Use this command to compile the firmware for the KLOR.
 
 
 
-## RP204 MCU
+
+## RP2040 MCU
 **Adafruit KB2040 / Sparkfun Pro Micro RP2040 / Boardsource Blok**
 
 Currently you need to use [this PR](https://github.com/KarlK90/qmk_firmware/tree/feature/raspberry-pi-rp2040-support) instead of the official QMK Repo, if you plan to use the RP2040.\
