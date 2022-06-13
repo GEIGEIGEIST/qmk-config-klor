@@ -1,7 +1,7 @@
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="docs/images/klor-font-logo-dark">
-  <source media="(prefers-color-scheme: light)" srcset="docs/images/klor-font-logo-bright">
-  <img alt="KLOR logo font" src="docs/images/klor-font-logo-bright">
+  <source media="(prefers-color-scheme: dark)" srcset="/docs/images/klor-font-logo-dark">
+  <source media="(prefers-color-scheme: light)" srcset="/docs/images/klor-font-logo-bright">
+  <img alt="KLOR logo font" src="/docs/images/klor-font-logo-bright">
 </picture>
 
 # THIS IS THE QMK CONFIG FOR THE KLOR SPLIT KEYBOARD
