@@ -11,9 +11,8 @@ ALLOW_WARNINGS = yes
 LTO_ENABLE = no
 
 # PIO serial/WS2812 drivers must be used on RP2040
-SERIAL_DRIVER = pio
-WS2812_DRIVER = pio
+SERIAL_DRIVER = vendor
+WS2812_DRIVER = vendor
 
 # Audio currently doesn't work with the RP2040
 AUDIO_ENABLE = no
-

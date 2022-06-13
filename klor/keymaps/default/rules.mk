@@ -5,15 +5,12 @@ EXTRAKEY_ENABLE = yes
 AUDIO_ENABLE = no
 MUSIC_ENABLE = no
 
+DYNAMIC_MACRO_ENABLE = no
+COMBO_ENABLE = no
+KEY_OVERRIDE_ENABLE = no
 
-
-
-
+#HAPTIC FEEBACK
 HAPTIC_ENABLE = no
 
-
-
-
-
 #PER KEY RGB
-RGB_MATRIX_ENABLE = no     # Enable keyboard RGB matrix (do not use together with RGBLIGHT_ENABLE)
+RGB_MATRIX_ENABLE = no

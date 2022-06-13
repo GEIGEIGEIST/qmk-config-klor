@@ -8,26 +8,32 @@ for more options.
 #define MASTER_LEFT
 // #define MASTER_RIGHT
 
-//#define TAPPING_FORCE_HOLD
-//#define TAPPING_TERM 100
 
-#define RGB_DI_PIN GP0
-#define RGBLED_NUM 42
-#define RGBLED_SPLIT { 21, 21 }
-#define RGBLIGHT_ANIMATIONS
+//#define TAPPING_TERM 170
+#define TAPPING_TERM 170
 
+// Prevent normal rollover on alphas from accidentally triggering mods.
+#define IGNORE_MOD_TAP_INTERRUPT
+
+// Enable rapid switch from tap to hold, disables double tap hold auto-repeat.
+#define TAPPING_FORCE_HOLD
+
+// Auto Shift
+#define NO_AUTO_SHIFT_ALPHA
+#define AUTO_SHIFT_TIMEOUT TAPPING_TERM
+#define AUTO_SHIFT_NO_SETUP
+
+#undef LOCKING_SUPPORT_ENABLE
+#undef LOCKING_RESYNC_ENABLE
+#define NO_ACTION_ONESHOT
+//#define NO_ACTION_TAPPING
+//#define NO_MUSIC_MODE
+
+#define COMBO_COUNT 1
 
 
 // RGB matrix support
 #ifdef RGB_MATRIX_ENABLE
-#    define SPLIT_TRANSPORT_MIRROR
-#    define DRIVER_LED_TOTAL 42 // Number of LEDs
-#    define RGB_MATRIX_SPLIT { 21, 21 }
-#    define RGB_MATRIX_MAXIMUM_BRIGHTNESS 180
-#    define RGB_MATRIX_STARTUP_HUE 35
-#    define RGB_MATRIX_STARTUP_VAL RGB_MATRIX_MAXIMUM_BRIGHTNESS
-#    define RGB_DISABLE_WHEN_USB_SUSPENDED
-#    define RGB_MATRIX_KEYPRESSES
 #    define RGB_MATRIX_STARTUP_MODE RGB_MATRIX_SOLID_REACTIVE_MULTIWIDE
 // RGB Matrix Animation modes. Explicitly enabled
 // For full list of effects, see:
@@ -79,31 +85,3 @@ for more options.
 //#    define ENABLE_RGB_MATRIX_SOLID_SPLASH
 #    define ENABLE_RGB_MATRIX_SOLID_MULTISPLASH
 #endif
-
-
-
-
-//#define TAPPING_TERM 170
-#define TAPPING_TERM 170
-
-// Prevent normal rollover on alphas from accidentally triggering mods.
-#define IGNORE_MOD_TAP_INTERRUPT
-
-// Enable rapid switch from tap to hold, disables double tap hold auto-repeat.
-#define TAPPING_FORCE_HOLD
-
-// Auto Shift
-#define NO_AUTO_SHIFT_ALPHA
-#define AUTO_SHIFT_TIMEOUT TAPPING_TERM
-#define AUTO_SHIFT_NO_SETUP
-
-#undef LOCKING_SUPPORT_ENABLE
-#undef LOCKING_RESYNC_ENABLE
-#define NO_ACTION_ONESHOT
-//#define NO_ACTION_TAPPING
-//#define NO_MUSIC_MODE
-
-#define COMBO_COUNT 1
-
-
-

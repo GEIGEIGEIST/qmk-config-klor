@@ -35,7 +35,7 @@
 
 
 /* audio support */
-//#undef AUDIO_PIN
+#undef AUDIO_PIN
 //#define AUDIO_PIN GP9
 
 
@@ -51,6 +51,10 @@
 #define SOFT_SERIAL_PIN GP1
 #define SERIAL_PIO_USE_PIO1
 
+
+/* rgb led support*/
+#undef RGB_DI_PIN
+#define RGB_DI_PIN GP0
 
 
 // SPARKFUN PRO MICRO RP2040 ├──────────────────────────────────┐
