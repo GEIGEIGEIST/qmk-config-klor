@@ -89,7 +89,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #ifdef OLED_ENABLE
 #    define OLED_DISPLAY_128X64
 #    define SPLIT_OLED_ENABLE
-#    define OLED_FONT_H  "keyboards/klor/lib/glcdfont.c"
+#    define OLED_FONT_H  "./lib/glcdfont.c"
 #endif
 
 
