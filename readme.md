@@ -40,6 +40,6 @@ Than you can use this command to compile the RP2040 firmware for the KLOR.
 `qmk compile -kb klor/kb2040 -km default`
 
 
-
-## VIA(L)
-TBA
+## TODO
+Add VIA(L) support
+Add the code for the Pixart Paw3204 trackball
