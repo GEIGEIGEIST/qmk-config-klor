@@ -9,7 +9,7 @@
 [Here](https://github.com/GEIGEIGEIST/zmk-config-klor) you can find the ZMK config for the KLOR.\
 [Here](https://github.com/GEIGEIGEIST/klor) you can find the hardware files and build guide.
 
-KLOR is 42 keys column-staggered split keyboard. It supports a per key RGB matrix, encoders, OLED displays, haptic feedback, audio, a Pixart Paw3204 trackball and four different layouts, through brake off parts.
+KLOR is 36-42 keys column-staggered split keyboard. It supports a per key RGB matrix, encoders, OLED displays, haptic feedback, audio, a Pixart Paw3204 trackball and four different layouts, through brake off parts.
 
 ![KLOR layouts](/docs/images/klor-layouts.svg)
 
