@@ -8,11 +8,14 @@
 #undef MATRIX_ROW_PINS
 #undef MATRIX_COL_PINS
 
-// PRO MICRO RP2040 ├──────────────────────────────────┐
+
+
+// PRO MICRO RP2040 ├───────────────────────────────────────────┐
 
 // wiring of each half
 #define MATRIX_ROW_PINS { GP5, GP6, GP7, GP8 }
 #define MATRIX_COL_PINS { GP27, GP26, GP22, GP20, GP23, GP21 }
+#define RP2040_BOOTLOADER_DOUBLE_TAP_RESET_LED GP25
 
 /*
 // ADAFRUIT KB2040 ├────────────────────────────────────────────┐
@@ -20,7 +23,13 @@
 // wiring of each half
 #define MATRIX_ROW_PINS { GP5, GP6, GP7, GP8 }
 #define MATRIX_COL_PINS { GP27, GP26, GP18, GP20, GP19, GP10 }
+//#define RP2040_BOOTLOADER_DOUBLE_TAP_RESET_LED GP17
 */
+
+
+#define RP2040_BOOTLOADER_DOUBLE_TAP_RESET
+#define RP2040_BOOTLOADER_DOUBLE_TAP_RESET_TIMEOUT 500U
+
 
 /* encoder support */
 #undef ENCODERS_PAD_A
@@ -55,14 +64,3 @@
 /* rgb led support*/
 #undef RGB_DI_PIN
 #define RGB_DI_PIN GP0
-
-
-// PRO MICRO RP2040 ├──────────────────────────────────┐
-#define RP2040_BOOTLOADER_DOUBLE_TAP_RESET_LED GP25
-
-// ADAFRUIT KB2040 ├────────────────────────────────────────────┐
-//#define RP2040_BOOTLOADER_DOUBLE_TAP_RESET_LED GP17
-
-#define RP2040_BOOTLOADER_DOUBLE_TAP_RESET
-#define RP2040_BOOTLOADER_DOUBLE_TAP_RESET_TIMEOUT 500U
-
