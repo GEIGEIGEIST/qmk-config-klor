@@ -3,11 +3,11 @@
 This is the RP2040 revision of the firmware.
 You can use several RP2040 based MCUs with Pro Micro formfactor.
 
-- [Sparkfun Pro Micro PR2040](https://www.sparkfun.com/products/18288)
-- [Adafruit KB2040](https://learn.adafruit.com/adafruit-kb2040) 
+- [Sparkfun Pro Micro RP2040](https://www.sparkfun.com/products/18288)
 - [Boardsource Blok](https://boardsource.xyz/store/628b95b494dfa308a6581622)
+- [Adafruit KB2040](https://learn.adafruit.com/adafruit-kb2040) 
 
-By default the config is setup for the Sparkfun Pro Micro RP2040. Since the KB2040 has a slightly different pinout you need to uncomment the appropiate lines in the `/kb2040/config.h` file.
+By default the config is setup for the pinout of the Sparkfun Pro Micro RP2040, which is used by most of the RP2040 based MCUs. Since the KB2040 has a slightly different pinout you need to uncomment the appropiate lines in the `/rp2040/config.h` file.
 
 
 ## Bootloader

@@ -34,12 +34,13 @@ for more options.
 
 // RGB matrix support
 #ifdef RGB_MATRIX_ENABLE
-#    define RGB_MATRIX_STARTUP_MODE RGB_MATRIX_SOLID_REACTIVE_MULTIWIDE
+#    define RGB_MATRIX_STARTUP_MODE RGB_MATRIX_SOLID_COLOR
 // RGB Matrix Animation modes. Explicitly enabled
 // For full list of effects, see:
 // https://docs.qmk.fm/#/feature_rgb_matrix?id=rgb-matrix-effect
 
 //#    define ENABLE_RGB_MATRIX_ALPHAS_MODS
+#    define ENABLE_RGB_MATRIX_SOLID_COLOR
 #    define ENABLE_RGB_MATRIX_SOLID_REACTIVE_MULTIWIDE
 #    define ENABLE_RGB_MATRIX_GRADIENT_UP_DOWN
 #    define ENABLE_RGB_MATRIX_GRADIENT_LEFT_RIGHT
