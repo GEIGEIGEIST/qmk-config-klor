@@ -42,3 +42,6 @@ Than you can use this command to compile the RP2040 firmware for the KLOR.
 ## TODO
 - Add VIA(L) support
 - Add the code for the Pixart Paw3204 trackball
+- Add custom LED animation
+- Add OLED animation
+- Make the haptic feedback work on the peripheral side
