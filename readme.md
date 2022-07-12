@@ -30,10 +30,10 @@ Than you can use this command to compile the firmware for the KLOR.
 
 
 ## RP2040 MCU
-**Adafruit KB2040 / Sparkfun Pro Micro RP2040 / Boardsource Blok / Elite-Pi / Sea-Picro**
+**Adafruit KB2040 / Sparkfun Pro Micro RP2040 / BastardKB Splinky / Boardsource Blok / Elite-Pi / Sea-Picro**
 
 Place the klor folder from this repository in the keyboards folder of your qmk installation.\
-Most of the RP2040 MCUs use the same pinout, the Adafruit KB2040 is an exclusion. If you plan on using it you need to uncomment the appropiate lines in the `/rp2040/config.h` file.\
+Most of the RP2040 MCUs use the same pinout, the Adafruit KB2040 is an exclusion. If you plan on using it you need to uncomment the appropiate lines in the `/rp2040/rules.mk` file.\
 Than you can use this command to compile the RP2040 firmware for the KLOR.
 
 `qmk compile -kb klor/rp2040 -km default`
