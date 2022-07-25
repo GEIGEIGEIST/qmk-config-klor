@@ -722,11 +722,21 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 
 bool encoder_update_user(uint8_t index, bool clockwise) {
     if (index == 0) {
+
+      if(IS_LAYER_ON(_RAISE)){
+        if(clockwise){
+          tap_code(KC_WH_R);
+        }
+        else{
+          tap_code(KC_WH_L);
+        }
+      }else{
         if (clockwise) {
             tap_code(KC_VOLU);
         } else {
             tap_code(KC_VOLD);
         }
+      }
 
 // ┌───────────────────────────────────────────────────────────┐
 // │ e n c o d e r  R                                          │
@@ -739,6 +749,13 @@ bool encoder_update_user(uint8_t index, bool clockwise) {
           } else {
               tap_code(KC_MPRV);
           }
+      }else if(IS_LAYER_ON(_RAISE)){
+        if(clockwise){
+          tap_code(KC_WH_D);
+        }
+        else{
+          tap_code(KC_WH_U);
+        }
       }else {
             if (clockwise) {
               tap_code(KC_VOLU);
