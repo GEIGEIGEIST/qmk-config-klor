@@ -190,3 +190,27 @@ void suspend_wakeup_init_kb(void) {
 #endif //RGB_MATRIX_ENABLE
 
 
+
+
+/*
+void keyboard_post_init_kb(void) {
+    debug_enable = true;
+
+#if defined(DEFERRED_EXEC_ENABLE)
+    // Define function so `defer_exec` doesn't crash the compiling
+    uint32_t deferred_init(uint32_t trigger_time, void *cb_arg);
+
+    // Defer init code so USB has started and we can receive console messages
+    defer_exec(INIT_DELAY, deferred_init, NULL);
+}
+
+uint32_t deferred_init(uint32_t trigger_time, void *cb_arg) {
+#endif // DEFERRED_EXEC_ENABLE
+
+oled_init(OLED_ROTATION_90);
+
+#if defined(DEFERRED_EXEC_ENABLE)
+    return 0; //don't repeat the function    
+#endif
+}
+*/

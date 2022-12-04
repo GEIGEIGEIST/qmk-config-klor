@@ -8,6 +8,7 @@ for more options.
 #define MASTER_LEFT
 // #define MASTER_RIGHT
 
+#define INIT_DELAY 2500
 
 //#define TAPPING_TERM 170
 #define TAPPING_TERM 170
@@ -95,3 +96,7 @@ for more options.
 #endif
 
 
+// - Default values
+#if !defined(INIT_DELAY)
+#    define INIT_DELAY 5
+#endif // INIT_DELAY

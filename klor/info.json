@@ -1,7 +1,12 @@
 {
     "keyboard_name": "KLOR", 
     "url": "https://github.com/GEIGEIGEIST/KLOR", 
-    "maintainer": "GEIST", 
+    "manufacturer": "GEIST",
+    "usb": {
+        "vid": "0x3A3C",
+        "pid": "0x0001",
+        "device_version": "1.3.0"
+    },
     "layouts": {
         "LAYOUT_polydactyl": {
             "layout": [

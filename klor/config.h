@@ -19,14 +19,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #include "config_common.h"
 
-/* USB Device descriptor parameter */
-#define VENDOR_ID       0x3A3C
-#define PRODUCT_ID      0x0001
-#define DEVICE_VER      0x0001
-#define MANUFACTURER    GEIST
-#define PRODUCT         KLOR
-
-
 /* key matrix size */
 // Rows are doubled-up
 #define MATRIX_ROWS 8
@@ -38,12 +30,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define MATRIX_COL_PINS { F6, F7, B1, B3, B2, B6 }
 #define DIODE_DIRECTION COL2ROW
 
-#define UNUSED_PINS
-
 
 /* audio support */
 #define AUDIO_VOICES
 #define AUDIO_PIN B5
+
 
 //#define NO_ACTION_MACRO
 //#define NO_ACTION_FUNCTION
@@ -72,7 +63,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define RGB_DI_PIN D3
 #define RGBLED_NUM 42
 #define RGBLED_SPLIT { 21, 21 }
-#define RGBLIGHT_ANIMATIONS
+#define RGB_MATRIX_LED_COUNT RGBLED_NUM
 
 
 #ifdef HAPTIC_ENABLE
@@ -87,6 +78,14 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #endif
 
 
+#ifdef POINTING_DEVICE_ENABLE
+#    define PAW3204_SCLK_PIN D0
+#    define PAW3204_SDIO_PIN D1
+#    define POINTING_DEVICE_AUTO_MOUSE_ENABLE
+#    define AUTO_MOUSE_DELAY 300
+#endif
+
+
 #ifdef OLED_ENABLE
 #    define OLED_DISPLAY_128X64
 #    define SPLIT_OLED_ENABLE
@@ -95,7 +94,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 
 #ifdef AUDIO_ENABLE
-#    define NO_MUSIC_MODE
 #    define STARTUP_SONG SONG(PREONIC_SOUND)
 #    define DEFAULT_LAYER_SONGS \
         { SONG(QWERTY_SOUND), SONG(COLEMAK_SOUND), SONG(DVORAK_SOUND) }
