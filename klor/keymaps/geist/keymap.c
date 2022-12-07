@@ -507,16 +507,6 @@ layer_state_t layer_state_set_kb(layer_state_t state) {
     return update_tri_layer_state(state, _LOWER, _RAISE, _ADJUST);
 }
 
-
-
-// ┌───────────────────────────────────────────────────────────┐
-// │ o l e d   r o t a t i o n                                 │
-// └───────────────────────────────────────────────────────────┘
-
-oled_rotation_t oled_init_kb(oled_rotation_t rotation) {
-    return OLED_ROTATION_180;
-}
-
 // ┌───────────────────────────────────────────────────────────┐
 // │ w r i t e   t o   o l e d                                 │
 // └───────────────────────────────────────────────────────────┘
