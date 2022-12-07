@@ -14,10 +14,12 @@ LTO_ENABLE = no
 SERIAL_DRIVER = vendor
 WS2812_DRIVER = vendor
 
-# convert to rp2040 pinout. if you use the kb2040 comment this line and uncomment the second line
+# CONVERTER - if you use a listed MCU comment the first line and uncomment the appropiate line
 CONVERT_TO = promicro_rp2040
 #CONVERT_TO = kb2040
+#CONVERT_TO = blok
+#CONVERT_TO = elite_pi
 
-# Audio currently doesn't work with the RP2040
+# AUDIO 
 AUDIO_ENABLE = yes
 AUDIO_DRIVER = pwm_hardware

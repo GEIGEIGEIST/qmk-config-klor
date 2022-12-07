@@ -18,6 +18,11 @@
 #include "klor.h"
 
 
+oled_rotation_t oled_init_kb(oled_rotation_t rotation) {
+    return OLED_ROTATION_180;
+}
+
+
 //#ifdef HAPTIC_ENABLE
 //#include "drivers/haptic/DRV2605L.h"
 //#endif //HAPTIC ENABLE
@@ -27,35 +32,32 @@
 
 __attribute__ ((weak))
 const keypos_t PROGMEM hand_swap_config[MATRIX_ROWS][MATRIX_COLS] =
-    // The LAYOUT macro could work for this, but it was harder to figure out the
-    // identity using it.
 
-    // This is the identity layout.
-/*
-{ \
- { {1, 0}, {2, 0}, {3, 0}, {4, 0}, {5, 0} }, \
+/*  ORIGINAL LAYOUT
+{  // LEFT 
+ { {0, 0}, {1, 0}, {2, 0}, {3, 0}, {4, 0}, {5, 0} }, \
  { {0, 1}, {1, 1}, {2, 1}, {3, 1}, {4, 1}, {5, 1} }, \
  { {0, 2}, {1, 2}, {2, 2}, {3, 2}, {4, 2}, {5, 2} }, \
- { {1, 3}, {2, 3}, {3, 3}, {4, 3}, {5, 3} }, \
-    \
- { {1, 5}, {2, 5}, {3, 5}, {4, 5}, {5, 5} }, \
+ { {0, 3}, {1, 3}, {2, 3}, {3, 3}, {4, 3}, {5, 3} }, \
+    // RIGHT
+ { {0, 4}, {1, 4}, {2, 4}, {3, 4}, {4, 4}, {5, 4} }, \
+ { {0, 5}, {1, 5}, {2, 5}, {3, 5}, {4, 5}, {5, 5} }, \
  { {0, 6}, {1, 6}, {2, 6}, {3, 6}, {4, 6}, {5, 6} }, \
  { {0, 7}, {1, 7}, {2, 7}, {3, 7}, {4, 7}, {5, 7} }, \
- { {1, 8}, {2, 8}, {3, 8}, {4, 8}, {5, 8} }, \
 };
 */
 
-    // This is the mirror, q <-> p, w <-> o, etc...
-{ \
- {         {1, 5}, {2, 5}, {3, 5}, {4, 5}, {5, 5} }, \
+//  MIRRORED LAYOUT
+{  // LEFT 
+ { {0, 4}, {1, 4}, {2, 4}, {3, 4}, {4, 4}, {5, 4} }, \
+ { {0, 5}, {1, 5}, {2, 5}, {3, 5}, {4, 5}, {5, 5} }, \
  { {0, 6}, {1, 6}, {2, 6}, {3, 6}, {4, 6}, {5, 6} }, \
  { {0, 7}, {1, 7}, {2, 7}, {3, 7}, {4, 7}, {5, 7} }, \
- {         {1, 8}, {2, 8}, {3, 8}, {4, 8}, {5, 8} }, \
-                                                     \
- {         {1, 0}, {2, 0}, {3, 0}, {4, 0}, {5, 0} }, \
+    // RIGHT
+ { {0, 0}, {1, 0}, {2, 0}, {3, 0}, {4, 0}, {5, 0} }, \
  { {0, 1}, {1, 1}, {2, 1}, {3, 1}, {4, 1}, {5, 1} }, \
  { {0, 2}, {1, 2}, {2, 2}, {3, 2}, {4, 2}, {5, 2} }, \
- {         {1, 3}, {2, 3}, {3, 3}, {4, 3}, {5, 3} }, \
+ { {0, 3}, {1, 3}, {2, 3}, {3, 3}, {4, 3}, {5, 3} }, \
 };
 
 #endif //SWAP_HANDS_ENABLE
@@ -81,15 +83,15 @@ const keypos_t PROGMEM hand_swap_config[MATRIX_ROWS][MATRIX_COLS] =
 //
 // Electrical layout ───────────────────────────────────────
 //
-// C  00  01  02  03  04  05    06  07  08  09  10  11    R
-//      ┌────────────────────┐┌────────────────────┐
-//    X │ 18  13  12  06  05 ││ 26  27  33  34  39 │ X   00
-//  ┌───┴────────────────────┤├────────────────────┴───┐
-//  │ 20  17  14  11  07  04 ││ 25  28  32  35  38  40 │ 01
-//  ├────────────────────────┤├────────────────────────┤ 
-//  │ 19  16  15  10  08  03 ││ 24  29  31  36  37  41 │ 02
-//  └───┬────────────────┬───┘└───┬────────────────┬───┘
-//    X │ 09  02  01  00 │ X    X │ 21  22  23  30 │ X   03
+// C  00──01──02──03──04──05────06──07──08──09──10──11   R
+//      ┌────────────────────┐┌────────────────────┐     │
+//    X │ 18  13  12  06  05 ││ 26  27  33  34  39 │ X   0
+//  ┌───┴────────────────────┤├────────────────────┴───┐ │
+//  │ 20  17  14  11  07  04 ││ 25  28  32  35  38  40 │ 1
+//  ├────────────────────────┤├────────────────────────┤ │ 
+//  │ 19  16  15  10  08  03 ││ 24  29  31  36  37  41 │ 2
+//  └───┬────────────────┬───┘└───┬────────────────┬───┘ │
+//    X │ 09  02  01  00 │ X    X │ 21  22  23  30 │ X   3
 //      └────────────────┘        └────────────────┘
 
 
@@ -191,26 +193,3 @@ void suspend_wakeup_init_kb(void) {
 
 
 
-
-/*
-void keyboard_post_init_kb(void) {
-    debug_enable = true;
-
-#if defined(DEFERRED_EXEC_ENABLE)
-    // Define function so `defer_exec` doesn't crash the compiling
-    uint32_t deferred_init(uint32_t trigger_time, void *cb_arg);
-
-    // Defer init code so USB has started and we can receive console messages
-    defer_exec(INIT_DELAY, deferred_init, NULL);
-}
-
-uint32_t deferred_init(uint32_t trigger_time, void *cb_arg) {
-#endif // DEFERRED_EXEC_ENABLE
-
-oled_init(OLED_ROTATION_90);
-
-#if defined(DEFERRED_EXEC_ENABLE)
-    return 0; //don't repeat the function    
-#endif
-}
-*/
