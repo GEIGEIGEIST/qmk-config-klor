@@ -33,15 +33,14 @@ Than you can use this command to compile the firmware for the KLOR.
 **Adafruit KB2040 / Sparkfun Pro Micro RP2040 / BastardKB Splinky / Boardsource Blok / Elite-Pi / Sea-Picro / key micro RP**
 
 Place the klor folder from this repository in the keyboards folder of your qmk installation.\
-Most of the RP2040 MCUs use the same pinout, the Adafruit KB2040 is an exclusion. If you plan on using it you need to uncomment the appropiate lines in the `/rp2040/rules.mk` file.\
+Most of the RP2040 MCUs use the same pinout, the Adafruit KB2040 is an exclusion. If you plan on using it you need to uncomment the appropiate lines in the `/2040/rules.mk` file.\
 Than you can use this command to compile the RP2040 firmware for the KLOR.
 
-`qmk compile -kb klor/rp2040 -km default`
+`qmk compile -kb klor/2040 -km default`
 
 
 ## TODO
 - Add VIA(L) support
-- Add the code for the Pixart Paw3204 trackball
 - Add custom LED animation
 - Add OLED animation
 - Make the haptic feedback work on the peripheral side

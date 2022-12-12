@@ -669,8 +669,8 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 
         case MAKE_H:
           if (record->event.pressed) {
-            #ifdef KEYBOARD_klor_rp2040
-              SEND_STRING ("qmk compile -kb klor/rp2040 -km geist");
+            #ifdef KEYBOARD_klor_2040
+              SEND_STRING ("qmk compile -kb klor/2040 -km geist");
             #else 
               SEND_STRING ("qmk compile -kb klor -km geist");
             #endif
