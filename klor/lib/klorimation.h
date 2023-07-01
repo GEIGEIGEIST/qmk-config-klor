@@ -3,7 +3,6 @@
 
 #pragma once
 
-
 // Animation parameters
 #define FRAME_DURATION 41 // How long each frame lasts in milliseconds 41 = 24fps
 

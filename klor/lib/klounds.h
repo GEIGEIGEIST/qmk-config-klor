@@ -12,4 +12,3 @@ float winxp_song[][2] = SONG(WINXP_SOUND);
 float mac_song[][2] = SONG(MAC_SOUND);
 float capson_song[][2] = SONG(CAPSON_SOUND);
 float capsoff_song[][2] = SONG(CAPSOFF_SOUND);
-
