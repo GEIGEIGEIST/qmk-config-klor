@@ -18,9 +18,6 @@
 #include QMK_KEYBOARD_H
 #include <stdio.h>
 #include <string.h>
-#if HAPTIC_ENABLE
-  #include "drivers/haptic/DRV2605L.h"
-#endif //HAPTIC ENABLE
 
 // ┌────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
 // │ K E Y M A P S                                                                                                                              │
